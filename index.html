@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This questionnaire is to determine the probability of the user's symptoms correlationg to an allergy or a cold. 
  
 Known Issues:
-blah, blah, blah, blah
+This questionnaire is not intended to diagnose the user with an allergy or a cold.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -113,8 +113,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         <p>Do you have a fever?</p>  
-		<a href="#three" class="w3-btn w3-black"> yes </a>
-		<a href="#three" class="w3-btn w3-black"> no </a>
+		<a href="#three" onclick="cold.Add();" class="w3-btn w3-black"> yes </a> <!--Added onclick to activate script-->
+		<a href="#three" onclick="allergy.Add();" class="w3-btn w3-black"> no </a> <!--Added onclick to activate script-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 	
@@ -127,8 +127,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
-		<a href="#four" class="w3-btn w3-black"> yes </a>
-		<a href="#four" class="w3-btn w3-black"> no </a>
+		<a href="#four" onclick="cold.Add();" class="w3-btn w3-black"> yes </a> <!--Added onclick to activate script-->
+		<a href="#four" onclick="allergy.Add();" class="w3-btn w3-black"> no </a> <!--Added onclick to activate script-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 	
@@ -136,26 +136,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
-		<a href="#five" class="w3-btn w3-black"> yes </a>
-		<a href="#five" class="w3-btn w3-black"> no </a>
-	</div> <!--Added ending div here-->
-</div> <!--Closed the div-->
-		
-	
-<div class="page" id="five">
-	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" class="w3-btn w3-black"> yes </a>
-		<a href="#five" class="w3-btn w3-black"> no </a>
+		<a href="#five" onclick="allergy.Add();" class="w3-btn w3-black"> yes </a>
+		<a href="#five" onclick="cold.Add();" class="w3-btn w3-black"> no </a>
 	</div> 
 		
 		<div class="page" id="Results">
