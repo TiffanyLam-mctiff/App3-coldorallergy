@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Tiffany Lam
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -36,23 +36,33 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
+        //initialize count variables and set to 0.
+	var allergy_count = 0;
         var cold_count = 0;
-
-
+	
+	//create function for adding 1 to allergy count whenever the function is called to later on in the code.
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
-
-        }
-
+            allergy_count = allergy_count + 1; //add one allergy count
+		alert(allergy_count); //when calling to allergyAdd, the alert will fire, denoting the count.
+        }//end of allergyAdd
+	
+	//create function for adding 1 to cold count whenever the function is called to later on in the code.
         function coldAdd(){
-            cold_count = cold_count + 1;
-		alert(cold_count); <!--Added alert for cold-->
-        }
-
+            cold_count = cold_count + 1; //add one to cold count
+		alert(cold_count);
+	}//end of coldAdd
+	
+	//create function to calculate percentage of questions that lend to allergy and cold
+	function getResult(){
+		//create calculation variables
+		var allergyPercent = (allergy_count/6)*100; //take the allergy count and divide by the total number of questons asked, then convert to percentage.
+		var coldPercent = (cold_count/6)*100; //take the cold count and divide by the total number of questons asked, then convert to percentage.
+		//create resultText variable using getElementById
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; 		
+        }//end of getResult
+	
   </script>
-
 
 
 <style>	
@@ -105,7 +115,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	</div>
 	
-	
 	<div class="page" id="two">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -148,6 +157,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	</div> 
 		
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you have a runny nose?</p>  
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> yes </a> <!--Added onclick to activate script-->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> no </a>  <!--Added onclick to activate script-->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+	
+	</div>
+		
 <div class="page" id="Results">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
@@ -163,3 +186,4 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 </body>
 </html>
+	
