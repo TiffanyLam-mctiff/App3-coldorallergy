@@ -59,7 +59,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var coldPercent = (cold_count/6)*100; //take the cold count and divide by the total number of questons asked, then convert to percentage.
 		//create resultText variable using getElementById
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; 		
+		resultText.innerHTML = "<br>Probability it is allergies =" + allergyPercent + "%" + "<br>Probability it is a cold =" + coldPercent + "%"; 		
         }//end of getResult
 	
   </script>
@@ -202,7 +202,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	
 	<div id="content">
-		<button onclick="getResult();"> Results </button>
+		<button class="border" onclick="getResult();"> Results </button>
 		<a id="results"></a>
 
 		
